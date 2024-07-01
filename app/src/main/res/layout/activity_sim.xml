@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SimActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/pink"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:text="SIMULATION"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/btnCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jenis Kelamin \n(0 : laki-laki dan 1 : perempuan)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Umur"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/hypertension"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Memiliki Riwayat Darah Tinggi \n(0 : Tidak dan 1 : Ya)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/heart_disease"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Memiliki Riwayat Jantung \n(0 : Tidak dan 1 : Ya)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/ever_married"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Sudah Menikah \n(0 : Tidak dan 1 : Ya)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/work_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pekerjaan \n(0 : PNS, 1 : Tidak Bekerja, 2 : Swasta, \n3 : Wiraswasta, 4 : Guru)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/residence_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tempat Tinggal \n(0 : Pedesaan dan 1 : Perkotaan)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/avg_glucose_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Rata - Rata Kadar Glukosa Dalam Darah"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/bmi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Indeks Masa Tubuh"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/smoking_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Apakah Perokok\n(0 : Tidak Tahu, 1 : Pernah Merokok, \n2 : Tidak Merokok, 3 : Perokok)"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Predict"
+        app:layout_constraintTop_toBottomOf="@id/mainScrollView"
+        app:layout_constraintBottom_toTopOf="@id/txtResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="409dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
